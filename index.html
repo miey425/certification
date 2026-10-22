@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5f4ef">
+  <title>余白 — 資格勉強の記録</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Zen+Kaku+Gothic+New:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="shell">
+    <header class="topbar">
+      <a class="brand" href="#" aria-label="余白 ホーム"><span class="brand-mark">余</span><span>余白 <small>STUDY SPACE</small></span></a>
+      <div class="date"><span class="date-dot"></span><span id="today-label"></span></div>
+    </header>
+
+    <main>
+      <section class="welcome">
+        <p class="eyebrow">YOUR QUIET PLACE TO FOCUS</p>
+        <h1>今日も、少しずつ。</h1>
+        <p class="welcome-copy">焦らず、自分のペースで。今日の一歩を積み重ねよう。</p>
+      </section>
+
+      <section class="dashboard" aria-label="学習ダッシュボード">
+        <div class="focus-panel">
+          <div class="section-head"><div><span class="eyebrow">FOCUS SESSION</span><h2>ポモドーロタイマー</h2></div><span class="session-tag"><i></i> 集中モード</span></div>
+          <div class="timer-wrap">
+            <svg class="timer-ring" viewBox="0 0 240 240" aria-hidden="true"><circle class="ring-track" cx="120" cy="120" r="108"/><circle class="ring-progress" id="ring-progress" cx="120" cy="120" r="108"/></svg>
+            <div class="timer-content"><span id="timer-mode">FOCUS TIME</span><strong id="timer">25:00</strong><span id="timer-caption">25分の集中を始めよう</span></div>
+          </div>
+          <div class="timer-actions"><button id="start-button" class="button-primary">集中をはじめる <span aria-hidden="true">→</span></button><button id="reset-button" class="button-quiet" aria-label="タイマーをリセット">リセット</button></div>
+          <div class="timer-settings"><span>集中 <b>25分</b></span><span class="setting-divider"></span><span>休憩 <b>5分</b></span><button id="skip-button" title="次の時間へ">次へ ↗</button></div>
+        </div>
+
+        <aside class="side-column">
+          <div class="daily-panel">
+            <div class="section-head compact"><div><span class="eyebrow">TODAY</span><h2>今日の勉強</h2></div><span class="today-icon" aria-hidden="true">↗</span></div>
+            <div class="hours"><strong id="hours">0</strong><span>時間</span><strong id="minutes">00</strong><span>分</span></div>
+            <div class="progress-meta"><span>今日の目標</span><span><b id="goal-status">0</b> / 2時間</span></div>
+            <div class="progress-track"><span id="goal-progress"></span></div>
+            <p class="daily-note" id="daily-note">まずは5分から。始めることがいちばん大切。</p>
+          </div>
+          <div class="tip-panel"><div class="tip-top"><span class="eyebrow">A LITTLE PERSPECTIVE</span><span class="tip-spark" aria-hidden="true">✳</span></div><p class="tip-label">今日の積み重ねは…</p><h3 id="tip-title">小さな一歩</h3><p id="tip-copy">勉強を始める、その決断が未来を変える最初の1ページ。</p><div class="tip-rule"></div><span class="tip-foot">時間のものさしを、少し変えてみる。</span></div>
+        </aside>
+      </section>
+
+      <section class="history-section">
+        <div class="history-heading"><div><span class="eyebrow">YOUR JOURNEY</span><h2>今週の記録</h2></div><span class="week-total" id="week-total">合計 0時間</span></div>
+        <div class="week-chart" id="week-chart" aria-label="今週の勉強時間"></div>
+      </section>
+      <footer><span>ひとつずつ、確かな自分に。</span><span>YOUR PROGRESS IS YOURS.</span></footer>
+    </main>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
