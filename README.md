@@ -4,7 +4,7 @@
 
 ## 公開URL
 
-GitHub Pages: https://miey425.github.io/-app/
+GitHub Pages: https://miey425.github.io/certification/
 
 ## GitHub Pages の設定
 
